@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  # /backend/[any string] => index.php, where router comes in play
+  RewriteRule ^backend/([\s\S]*)$ /php/index.php [L,NC,QSA]
+</IfModule>
+
+
+

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preload" href="/fonts/_shared/inter-v13-cyrillic_latin-regular.woff2" as="font" type="font/woff2"
+    crossorigin="crossorigin" />
+  <link rel="preload" href="/fonts/_shared/inter-v13-cyrillic_latin-500.woff2" as="font" type="font/woff2"
+    crossorigin="crossorigin" />
+
+  <style id="critical-css">:root{--scroll-padding-top:32px;--container-padding-horizontal:10px;--container-max-width:calc(1200px + var(--container-padding-horizontal)*2);--container-max-width-lg:calc(1350px + var(--container-padding-horizontal)*2);--font-family-main:inter,"trebuchet ms",sans-serif;--font-family-bestsellers-slide-title:sonic,"Arial Black",verdana,impact,sans-serif;--color-white:#fff;--color-white-90:hsla(0,0%,100%,.9);--color-white-80:hsla(0,0%,100%,.8);--color-white-70:hsla(0,0%,100%,.7);--color-white-60:hsla(0,0%,100%,.6);--color-white-40:hsla(0,0%,100%,.4);--color-white-20:hsla(0,0%,100%,.2);--color-gray-purple:rgba(154,156,203,.7);--color-dark-jungle-green:#152f24;--color-sea-green:#357b50;--color-forest-green:#428e5f;--color-soft-green:#6abc9c;--color-greenish-cyan:#3bf5bd;--color-pale-sky:#667085;--color-amethyst-smoke:#8f91d0;--color-aluminum:#acabbf;--color-coral-red:#f5443b;--header-gradient:linear-gradient(180deg,var(--color-forest-green) 0%,var(--color-sea-green) 100%);--first-section-gradient:linear-gradient(180deg,var(--color-sea-green) 0%,var(--color-dark-jungle-green) 100%);--color-accent-1:var(--color-coral-red);--color-accent-2:var(--color-pale-sky);--color-section-bg-dark:var(--color-dark-jungle-green);--color-text-emphasized:var(--color-white);--color-text-title:var(--color-white-80);--color-text-common:var(--color-white-60);--border-radius-6:6px;--border-radius-8:8px;--border-radius-12:12px;--border-radius-16:16px;--border-radius-20:20px;--line-height-text:1.5;--line-height-text-broad:1.7;--line-height-title:1.3;--transition-2xsm:100ms;--transition-xsm:200ms;--transition-sm:300ms;--transition-md:500ms;--transition-lg:800ms;--transition-xlg:1000ms;--transition-2xlg:1500ms;--transition-delay-2xsm:50ms;--transition-delay-xsm:100ms;--transition-delay-sm:150ms;--transition-delay-md:200ms;--transition-delay-lg:300ms;--transition-delay-xlg:400ms;--transition-delay-2xlg:500ms;--easing-default:ease;--easing-linear:linear;--easing-in:ease-in;--easing-out:ease-out;--easing-in-out:ease-in-out;--easing-out-back:cubic-bezier(0.25,-0.25,0.75,1.25);--easing-bounce:cubic-bezier(0.68,-0.55,0.265,1.55);--easing-bounce-out:cubic-bezier(0.61,0.01,0.47,1.52);--easing-bounce-in:cubic-bezier(0.63,-0.55,0.36,0.97);--easing-bounce-soft:cubic-bezier(0.6,0.33,0.67,1.29);--z-index-md:10;--z-index-lg:20;--z-index-xlg:30;--z-index-xxlg:40;--z-index-xxxlg:50;--z-index-top-layer:9999999999;--focus-visible-outline:3px dashed #000;--focus-visible-box-shadow:0 0 0 3px #fff}*,:after,:before{border:none;box-sizing:inherit;margin:0;padding:0}body,html{box-sizing:border-box;margin:0;min-height:100vh;min-height:100svh;padding:0;width:100%}html{hanging-punctuation:first last;line-height:1;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}a{color:inherit;font:inherit;touch-action:manipulation}[inert]{cursor:not-allowed;pointer-events:none}:where(picture,svg){max-width:100%;vertical-align:top}:where(img,video,canvas){display:block;max-width:100%;-webkit-user-select:none;-moz-user-select:none;user-select:none}:where(h1,h2,h3,h4,h5,h6){font:inherit;overflow-wrap:break-word}:where(input,button,textarea,select){font:inherit;font-size:100%}:where(input,textarea){min-width:0}button{-webkit-appearance:button;color:inherit;-webkit-tap-highlight-color:transparent;-moz-appearance:button;appearance:button;background-color:transparent;cursor:pointer;touch-action:manipulation}body{background-color:var(--color-forest-green);color:var(--color-text-common);font-family:var(--font-family-main);font-size:14px;line-height:var(--line-height-text);overflow-x:hidden;overflow-x:clip}:where(html,html body)::-webkit-scrollbar{height:8px;width:8px}:where(html,html body)::-webkit-scrollbar-track{outline:1px solid var(--color-white-60)}:where(html,html body)::-webkit-scrollbar-thumb{background:linear-gradient(177deg,var(--color-amethyst-smoke) 0,var(--color-greenish-cyan) 100%);outline:1px solid var(--color-pale-sky)}:where(html,html body)::-webkit-scrollbar-thumb:hover{background:linear-gradient(177deg,var(--color-aluminum) 0,var(--color-soft-green) 100%)}:where(html,html body)::-webkit-scrollbar-thumb:active{background:var(--color-coral-red);outline:2px solid var(--color-coral-red)}.wrapper{display:grid;grid-template-areas:"header" "main" "footer";grid-template-rows:auto 1fr auto;min-height:100vh;min-height:100svh;overflow:hidden}.header{grid-area:header}.main{grid-area:main}.footer{grid-area:footer}:where(.header,.main,.footer){max-width:100%;min-width:100%}.noscript{background-color:tomato;bottom:0;color:#fff;font-size:18px;left:0;padding:10px;position:fixed;text-align:center;width:100%;z-index:var(--z-index-xxxlg)}.logo-figure__logo{display:inline;max-width:137px;transition:var(--transition-sm) var(--easing-default);transition-property:transform}.logo-figure__logo:active{transform:translateY(-2px) scale(1.1)}.container--lg[class]{max-width:var(--container-max-width-lg)}.container{margin:0 auto;max-width:var(--container-max-width);padding-left:var(--container-padding-horizontal);padding-right:var(--container-padding-horizontal)}.container-breakout-left{margin-left:0;max-width:calc(var(--container-max-width) + (100vw - var(--container-max-width))/2);padding-left:0}:where(.fsz-title-xlg,.fsz-title-lg,.fsz-title-md){line-height:var(--line-height-title)}.fsz-title-xlg{font-size:56px;font-size:calc(29.78641px + 1.94175vw)}.fsz-title-lg{font-size:48px}.fsz-title-md{font-size:36px}.fsz-text-xlg{font-size:20px}.fsz-text-lg{font-size:18px}.fsz-text-md{font-size:16px}.text-balance{text-wrap:balance}.fw-bold{font-weight:700}.fw-semibold{font-weight:600}.fw-medium{font-weight:500}.color-emphasized{color:var(--color-text-emphasized)}.color-standard{color:var(--color-text-title)}.color-muted{color:var(--color-text-common)}.lines-clamp-2{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}.center,.text-center{text-align:center}.center{margin:0 auto}.max-ch-25{max-width:25ch}.max-ch-30{max-width:30ch}.max-ch-45{max-width:45ch}.max-ch-20{max-width:20ch}.max-ch-15{max-width:15ch}.section-dark{background-color:var(--color-section-bg-dark)}.section-gradient{background:var(--first-section-gradient)}.currency{margin-right:5px}.bg-dots{background-image:radial-gradient(#fff .5px,transparent 0),radial-gradient(#fff .5px,transparent 0);background-position:0 0,10px 10px;background-size:20px 20px}.ibg{position:relative}.ibg img,.img-cover{height:100%;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:50% 50%;object-position:50% 50%;position:absolute;top:0;width:100%}.header{background:var(--header-gradient);min-width:auto;width:calc(var(--vw)*100)}.header .header__list a{min-width:50%}.header__nav .nav__mobile-menu-effect{display:none}.header__nav{align-items:center;display:flex;gap:20px;justify-content:space-between;padding:10px 0}.header__list{grid-area:navigation}.header__list a{color:var(--color-white-80);display:inline-block;font-size:calc(14.28546px + 1.78579vw);font-weight:500;padding:15px}.header__logo-figure{grid-area:logo;grid-column:span 1;max-width:calc(101.61165px + 2.62136vw);z-index:var(--z-index-xlg)}.header__actions{align-items:center;display:flex;font-size:calc(12.57136px + .44645vw);gap:10px;grid-area:actions}.header__actions button{font-size:inherit}.burger{display:none}@media (min-width: 767.98px){.header__list a{font-size:calc(537614px - 70000vw)}.header__actions{font-size:calc(153612px - 20000vw)}}@media (min-width: 768px){.header .header__list a{min-width:unset}.header__nav{display:grid;grid-template-areas:"logo . navigation . actions";grid-template-columns:auto 1fr auto 2fr auto}.header__list{align-items:center;display:flex;flex-wrap:wrap;gap:7px 40px;justify-content:center;overflow:initial;padding-top:0}.header__list a{font-size:calc(8.72165px + .68729vw)}.header__list a{padding:5px}.header__actions{font-size:calc(6.72165px + .68729vw)}}@media (min-width: 1350px){.fsz-title-xlg{font-size:56px}.header__list a{font-size:18px}.header__logo-figure{max-width:137px}.header__actions{font-size:16px}}@media (min-width: 2000px){.container-breakout-left{margin-left:calc(50vw - 1000px);max-width:calc(var(--container-max-width) + (2000px - var(--container-max-width))/2)}}@media (max-width: 767.98px){.header .header__nav{position:relative;z-index:var(--z-index-xlg)}.header .header__list{background-color:var(--list-bg);height:calc(var(--list-height) + var(--list-translate-y));opacity:0;overflow:auto;padding:calc(var(--list-translate-y)) 20px 20px;position:fixed;right:0;top:calc(var(--list-translate-y)*-1);transform:translateY(var(--list-translate-y));width:var(--list-width);z-index:var(--z-index-lg)}.header .header__list:before{background-color:var(--list-bg);content:"";display:block;height:var(--list-padding-top);left:0;position:sticky;top:0;width:100%}.header__nav{--list-width:100%;--list-height:100%;--list-bg:var(--color-forest-green);--list-phantom-bg:var(--color-greenish-cyan);--list-second-phantom-bg:var(--color-soft-green);--list-translate-y:20px;--transition-duration-abstract:1;--list-padding-top:120px}.header__nav .nav__mobile-menu-effect{display:block;height:var(--list-height);overflow:hidden;pointer-events:none;position:fixed;right:0;top:0;width:var(--list-width)}.header__nav .nav__mobile-menu-effect:after,.header__nav .nav__mobile-menu-effect:before{background-color:var(--list-phantom-bg);border-radius:50%;content:"";height:var(--circle-size);left:var(--click-point-x);position:absolute;top:var(--click-point-y);transform:scale(0);transition:transform calc(var(--transition-duration-abstract)*var(--transition-md)) var(--easing-out) calc(var(--transition-duration-abstract)*75ms);width:var(--circle-size)}.header__nav .nav__mobile-menu-effect:after{background-color:var(--list-second-phantom-bg)}.header__nav.menu--mobile-ready .header__list{transition:calc(var(--transition-duration-abstract)*var(--transition-xsm)) var(--easing-default);transition-property:opacity,transform}.header__nav.open .header__list{opacity:1;transform:translateY(0);transition-delay:calc(var(--transition-duration-abstract)*.35s);transition-duration:calc(var(--transition-duration-abstract)*var(--transition-sm))}.header__nav.open .nav__mobile-menu-effect:after,.header__nav.open .nav__mobile-menu-effect:before{transform:scale(var(--circle-scale));transition-delay:0s}.header__nav.open .nav__mobile-menu-effect:after{transition-delay:calc(var(--transition-duration-abstract)*.28s)}.header__list a{display:block;text-align:center}.header__actions{display:none;justify-content:center;margin-bottom:30px}.header__actions--moved{display:flex}.burger{cursor:pointer;display:inline-block;height:var(--height);position:relative;width:var(--width);z-index:var(--z-index-xlg);--icon-scale:2.6;--width:40px;--height:30px;--default-color:var(--color-accent-1);--active-color:var(--color-white);--duration:var(--transition-md);--easing:var(--easing-bounce-soft);--lines-height:2px}.burger .icon{aspect-ratio:1/1;left:50%;max-height:100%;overflow:visible;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%) scale(var(--icon-scale));transition:transform var(--duration);width:100%}.burger .icon .line{fill:none;stroke:var(--default-color);stroke-dashoffset:0;stroke-linecap:round;stroke-width:calc(var(--lines-height)*2);transition:var(--duration) var(--easing);transition-property:stroke-dasharray,stroke-dashoffset,stroke}.burger .icon .line.top{stroke-dasharray:40,139}.burger .icon .line.bottom{stroke-dasharray:40,180}.burger .icon .line.middle{transition-property:stroke}.burger.active .icon{transform:translate(-50%,-50%) scale(var(--icon-scale)) rotate(45deg)}.burger.active .line{stroke:var(--active-color)}.burger.active .line.top{stroke-dashoffset:-98px}.burger.active .line.bottom{stroke-dashoffset:-138px}}@media (max-width: 320px){.fsz-title-xlg{font-size:36px}.header__list a{font-size:20px}.header__logo-figure{max-width:110px}.header__actions{font-size:14px}}@media (any-hover: hover){.logo-figure__logo{display:inline-block;transition-property:filter,transform}.logo-figure__logo:hover{filter:drop-shadow(0 4px 6px black);transform:translateY(-2px)}.header__list a{transition:color var(--transition-sm) var(--easing-default)}.header__list a:hover{color:var(--color-text-emphasized)}}@media (prefers-reduced-motion:no-preference){body,html{scroll-behavior:smooth}}@media (prefers-reduced-motion:reduce){:root{--transition-2xsm:0s;--transition-xsm:0s;--transition-sm:0s;--transition-md:0s;--transition-lg:0s;--transition-xlg:0s;--transition-xxlg:0s;--transition-delay-xxsm:0s;--transition-delay-xsm:0s;--transition-delay-sm:0s;--transition-delay-md:0s;--transition-delay-lg:0s;--transition-delay-xlg:0s;--transition-delay-2xlg:0s}}</style>
+<link rel="stylesheet" href="css/app.min.css?v=70d2ff4d9de9df43a1169be1390a2b70" />
+
+  <script>
+  document.documentElement.classList.add('js-enabled');
+
+  requestAnimationFrame(() => {
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.documentElement.style.setProperty('--scrollbar-width', scrollbarWidth + 'px');
+  });
+</script>
+
+<script defer src="js/app.min.js?v=a676fd651f8679bf872a333036b6b8fd"></script>
+
+  <title>Page</title>
+
+  <meta name="theme-color" content="#357b50">
+
+  <!-- ? <meta name="description" content="description"> -->
+  <meta name="format-detection" content="telephone=no, email=no, address=no, date=no" />
+  <!-- !! REMOVE THIS BEFORE PRODUCTION -->
+  <meta name="robots" content="nofollow, noindex">
+  <!-- <link rel="canonical" href=""> -->
+  <!-- <link rel="shortlink" href=""> -->
+</head>
+  <body class='body section-dark'>
+
+    <noscript>
+  <div class='noscript'>
+    javaScript is disabled in your browser. This site will work incorrectly without javaScript. Please enable scripts
+    in your browser
+  </div>
+</noscript>
+
+    <p class="hidden-alert visually-hidden" aria-live="assertive"></p>
+    <div class='document-overlay-bg'></div>
+
+
+
+    <dialog inert class='modal modal-auth modal-signup' data-modal id='modal-signup' aria-labelledby='modal-signup-title'>
+  <div class='modal__inner'>
+    <h3 class='modal-auth__title title fsz-title-md fw-medium center max-ch-25' id='modal-signup-title'>Create an Account</h3>
+
+    <form class='modal-auth__form auth-form signup-form fsz-text-lg' name='signup' method="post" action="/backend/users/create">
+      <!-- <input type="hidden" name="csrf_test_name" value="901eecb0811516eb1d4c9b9821d2ee33"> -->
+      <input type="hidden" name="remember_me" value="1">
+
+      <div class='auth-form__body'>
+        <label class='auth-form__label' for='signup-name'>Name:</label>
+        <input class='auth-form__input fw-medium' type="text" name="name" id="signup-name"
+          maxlength="128" autocomplete='name' >
+        <label class='auth-form__label' for='signup-email'>Email:</label>
+        <input class='auth-form__input fw-medium' type="email" name="email" id="signup-email"
+          maxlength="255" autocomplete='email' >
+        <label class='auth-form__label' for='signup-password'>Password:</label>
+        <input class='auth-form__input fw-medium' type="password" name="password"
+          id="signup-password" autocomplete='new-password' >
+        <label class='auth-form__label' for='signup-passwordRepeat'>Repeat password:</label>
+        <input class='auth-form__input fw-medium' type="password" name="password_repeat"
+          id="signup-password-repeat" autocomplete='new-password' >
+      </div>
+
+      <div class='auth-form__remember-me remember-me'>
+        <input class='remember-me__checkbox visually-hidden switch' type="checkbox" name="remember_me" id="signup-remember-me"
+          value="1" checked>
+        <label for='signup-remember-me'></label>
+
+        <label class='remember-me__label' for='signup-remember-me'>Remember me for</label>
+        <select class='remember-me__select select fw-medium'
+          name="remember-for-days"
+          id="signup-remember-for-days">
+          <option class='remember-me__option select__option' value="7">1 week</option>
+          <option class='remember-me__option select__option' selected value="14">2 weeks</option>
+          <option class='remember-me__option select__option' value="30">1 month</option>
+          <option class='remember-me__option select__option' value="91">3 months</option>
+          <option class='remember-me__option select__option' value="182">6 months</option>
+          <option class='remember-me__option select__option' value="365">1 year</option>
+        </select>
+        <button class='auth-form__send btn btn-accent btn-accent--filled' type='submit'>Sign Up</button>
+      </div>
+    </form>
+
+    <div class='modal-auth__switch-form'>
+      Already have an account?
+      <button class='modal-auth__switch-form-btn btn btn-accent btn-accent--filled' type='button' data-modal-open
+        data-target='modal-login'>Log in instead</button>
+      <button class='modal__close-btn btn btn-cross' type='button' data-modal-close
+        data-target='modal-signup' title='close'></button>
+    </div>
+  </div>
+</dialog>
+
+<dialog inert class='modal modal-auth modal-login' data-modal id='modal-login' aria-labelledby='modal-login-title'>
+  <div class='modal__inner'>
+    <h3 class='modal-auth__title title fsz-title-md fw-medium center max-ch-25' id='modal-login-title'>Log in</h3>
+
+    <form class='modal-auth__form auth-form login-form fsz-text-lg' name='login' method="post" action="/backend/users/create">
+      <!-- <input type="hidden" name="csrf_test_name" value="901eecb0811516eb1d4c9b9821d2ee33"> -->
+      <input type="hidden" name="remember_me" value="1">
+
+      <div class='auth-form__body'>
+        <label class='auth-form__label' for='login-email'>Email:</label>
+        <input class='auth-form__input fw-medium' type="email" name="email" id="login-email"
+          maxlength="255" autocomplete='email' required>
+        <label class='auth-form__label' for='login-password'>Password:</label>
+        <input class='auth-form__input fw-medium' type="password" name="password"
+          id="login-password" autocomplete='new-password' required>
+      </div>
+
+      <div class='auth-form__remember-me remember-me'>
+        <input class='remember-me__checkbox visually-hidden switch' type="checkbox" name="remember_me" id="login-remember-me"
+          value="1" checked>
+        <label for='login-remember-me'></label>
+
+        <label class='remember-me__label' for='login-remember-me'>Remember me for</label>
+        <select class='remember-me__select select fw-medium'
+          name="remember-for-days"
+          id="login-remember-for-days">
+          <option class='remember-me__option select__option' value="7">1 week</option>
+          <option class='remember-me__option select__option' selected value="14">2 weeks</option>
+          <option class='remember-me__option select__option' value="30">1 month</option>
+          <option class='remember-me__option select__option' value="91">3 months</option>
+          <option class='remember-me__option select__option' value="182">6 months</option>
+          <option class='remember-me__option select__option' value="365">1 year</option>
+        </select>
+        <button class='auth-form__send btn btn-accent btn-accent--filled' type='submit'>Log In</button>
+      </div>
+    </form>
+
+    <div class='modal-auth__switch-form'>
+      Don`t have an account?
+      <button class='modal-auth__switch-form-btn btn btn-accent btn-accent--filled' type='button' data-modal-open
+        data-target='modal-signup'>Sign up instead</button>
+      <button class='modal__close-btn btn btn-cross' type='button' data-modal-close
+        data-target='modal-login' title='close'></button>
+    </div>
+  </div>
+</dialog>
+
+    <div class='wrapper'>
+      
+<header class='header'>
+  <div class='container container--lg'>
+    <nav class='header__nav nav' aria-label="Main">
+      <div class='header__logo-figure logo-figure'>
+        <a class='header__logo logo-figure__logo' href='/' title='Icorner - Go To Main Page'>
+          <img src='/icon/_logo/logo.svg' alt='Icorner - Go To Main Page' />
+        </a>
+        <a class='visually-hidden visible-on-focus focus-skip-link' href='#main'>Skip to
+          main content</a>
+      </div>
+
+      <button type='button' class='header__burger burger'
+        aria-label='open or close menu' aria-expanded='false'
+        aria-controls='header__list'>
+        <svg class="icon" viewBox="0 0 100 100" aria-hidden='true'>
+          <path
+            class="line top"
+            d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+          <path
+            class="line middle"
+            d="m 30,50 h 40" />
+          <path
+            class="line bottom"
+            d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+        </svg>
+      </button>
+
+      <div class='nav__mobile-menu-effect'></div>
+
+      <ul class='header__list nav__list underline-links-on-hover' id='header__list'>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/courses.html'>Courses</a></li>
+        <li><a href='/news.html'>News</a></li>
+        <li><a href='/about-us.html'>About Us</a></li>
+      </ul>
+
+      <div class='header__actions'>
+        <button class='btn btn-accent btn-accent--filled btn-signup' type='button'
+          data-modal-open data-target='modal-signup'>Signup</button>
+        <button class='btn btn-accent btn-accent--filled btn-login' type='button'
+          data-modal-open data-target='modal-login'>Login</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+      <main class='main' id='main'>
+        <section class='hero section-gradient'>
+  <div class='hero__inner container container-breakout-left'>
+    <div class='hero__figure'>
+      <picture>
+        <source srcset="/img/pages/main/hero-image.avif" media="(min-width: 767.98px)" type='image/avif'>
+        <source srcset="/img/pages/main/hero-image.webp" media="(min-width: 767.98px)" type='image/webp'>
+        <source srcset="/img/pages/main/hero-image.png" media="(min-width: 767.98px)">
+        <!-- this is just dummy image in order for picture to work, bun not load image on mobiles (it is not visible anyway) -->
+        <img class='hero__image' srcset="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+          alt="Engaged woman having an 'aha' moment while taking an online course" fetchpriority='high'>
+      </picture>
+    </div>
+    <div class='hero__content'>
+      <h1 class='hero__title fw-semibold color-emphasized fsz-title-xlg text-balance'>Grow Your Skills To Advance Your Career
+        Path.</h1>
+      <h2 class='hero__subtitle color-standard fsz-text-lg'>We have something big for you who want to level up!</h2>
+      <div class='hero__search search-bar'>
+        <input class='hero__search-input search-bar__input' type='search' role='search'
+          placeholder='What do you want to learn...'>
+        <button class='search-bar__button' title='Search'>
+          <svg class='search-bar__icon' width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM21 21l-4-4" />
+          </svg>
+        </button>
+      </div>
+      <div class='hero__search-suggestions search-suggestions'>
+        <h2 class='search-suggestions__title color-muted fsz-text-lg' aria-label='search suggestions'>Suggestions</h2>
+        <ul class='search-suggestions__list'>
+          <li class='search-suggestions__li'>
+            <a class='search-suggestions__suggestion-link' href='#'>UI UX Design</a>
+          </li>
+          <li class='search-suggestions__li'>
+            <a class='search-suggestions__suggestion-link' href='#'>CSS Fundamental</a>
+          </li>
+          <li class='search-suggestions__li'>
+            <a class='search-suggestions__suggestion-link' href='#'>3D Design Illustration</a>
+          </li>
+          <li class='search-suggestions__li'>
+            <a class='search-suggestions__suggestion-link' href='#'>Website Development</a>
+          </li>
+          <li class='search-suggestions__li'>
+            <a class='search-suggestions__suggestion-link' href='#'>Logo Design</a>
+          </li>
+          <li class='search-suggestions__li'>
+            <a class='search-suggestions__suggestion-link' href='#'>Icon Design</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class='wave' fill="none" viewBox="0 0 1440 858">
+  <path fill="url(#a)"
+    d="M58 197C-40 213-66 347-66 347l1671 511 119-390S1566 67 1308 18c-257-49-253 97-567 1-159-48-272 7-308 54-30 39-41 100-106 120-104 32-152-15-269 4Z" />
+  <defs>
+    <lineargradient id="a" x1="286.8" x2="350.9" y2="285.4" y1="-243.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#428e5f" />
+      <stop offset="1" stop-color="#152f24" stop-opacity="0" />
+    </lineargradient>
+  </defs>
+</svg>
+
+        <section class='suggested-courses'>
+  <div class='suggested-courses__inner container'>
+    <h2 class='suggested-courses__title bg-dots fw-semibold fsz-title-md color-emphasized max-ch-25 center text-balance'>
+      What Do You Want to Learn? </h2>
+    <h3 class='suggested-courses__subtitle fsz-text-lg color-muted max-ch-45 center'>
+      Choose the right class as you need. Then enjoy studying.</h3>
+
+    <ul class='suggested-courses__list suggested-courses-list'>
+
+      <li class='suggested-courses__li suggested-course'>
+        <a class='suggested-course__figure ibg' href='#'>
+          <picture><source srcset="/img/pages/main/what-to-learn-1.avif" type="image/avif"><source srcset="/img/pages/main/what-to-learn-1.webp" type="image/webp"><img class='suggested-course__image' src='/img/pages/main/what-to-learn-1.jpg' alt loading='lazy' /></picture>
+          <div class='suggested-course__amount'>12 Videos</div>
+        </a>
+        <a class='suggested-course__category suggested-course__title-link fw-medium' href='#' title='category'>Technology</a>
+        <a class='suggested-course__title-link multiline-underline-on-hover' href='#'>
+          <h4 class='suggested-course__title fsz-text-lg fw-semibold color-emphasized'>Digital Marketing Strategy</h4>
+        </a>
+        <p class='suggested-course__text lines-clamp-2'>This course aims to give you deeper understanding of core processes</p>
+      </li>
+
+      <li class='suggested-courses__li suggested-course'>
+        <a class='suggested-course__figure ibg' href='#'>
+          <picture><source srcset="/img/pages/main/what-to-learn-2.avif" type="image/avif"><source srcset="/img/pages/main/what-to-learn-2.webp" type="image/webp"><img class='suggested-course__image' src='/img/pages/main/what-to-learn-2.jpg' alt loading='lazy' /></picture>
+          <div class='suggested-course__amount'>7 Videos</div>
+        </a>
+        <a class='suggested-course__category suggested-course__title-link fw-medium' href='#' title='category'>Design</a>
+        <a class='suggested-course__title-link multiline-underline-on-hover' href='#'>
+          <h4 class='suggested-course__title fsz-text-lg fw-semibold color-emphasized'>Figma Fundamental</h4>
+        </a>
+        <p class='suggested-course__text lines-clamp-2'>These lessons and exercises will help you start designing with Figma</p>
+      </li>
+
+      <li class='suggested-courses__li suggested-course'>
+        <a class='suggested-course__figure ibg' href='#'>
+          <picture><source srcset="/img/pages/main/what-to-learn-3.avif" type="image/avif"><source srcset="/img/pages/main/what-to-learn-3.webp" type="image/webp"><img class='suggested-course__image' src='/img/pages/main/what-to-learn-3.jpg' alt loading='lazy' /></picture>
+          <div class='suggested-course__amount'>10 Videos</div>
+        </a>
+        <a class='suggested-course__category suggested-course__title-link fw-medium' href='#' title='category'>Coding</a>
+        <a class='suggested-course__title-link multiline-underline-on-hover' href='#'>
+          <h4 class='suggested-course__title fsz-text-lg fw-semibold color-emphasized'>HTML Fundamental</h4>
+        </a>
+        <p class='suggested-course__text lines-clamp-2'>Well organized and easy to make you understand tutorials with lots
+          of</p>
+      </li>
+
+      <li class='suggested-courses__li suggested-course'>
+        <a class='suggested-course__figure ibg' href='#'>
+          <picture><source srcset="/img/pages/main/what-to-learn-4.avif" type="image/avif"><source srcset="/img/pages/main/what-to-learn-4.webp" type="image/webp"><img class='suggested-course__image' src='/img/pages/main/what-to-learn-4.jpg' alt loading='lazy' /></picture>
+          <div class='suggested-course__amount'>16 Videos</div>
+        </a>
+        <a class='suggested-course__category suggested-course__title-link fw-medium' href='#' title='category'>Coding</a>
+        <a class='suggested-course__title-link multiline-underline-on-hover' href='#'>
+          <h4 class='suggested-course__title fsz-text-lg fw-semibold color-emphasized'>Android App Development</h4>
+        </a>
+        <p class='suggested-course__text lines-clamp-2'>Take your Android coding skills to the next level, advanced Android
+          app</p>
+      </li>
+
+    </ul>
+
+    <a class='suggested-courses__show-all btn btn-accent btn-accent--hollow' href='/courses.html'>Show All Classes</a>
+  </div>
+</section>
+        <section class='benefits'>
+  <div class='benefits__inner container'>
+    <ul class='benefits__list'>
+
+      <li class='benefits__item benefits-item'>
+        <div class='benefits-item__figure'>
+          <svg width="48" height="48" fill="none" viewBox="0 0 66 66"><circle cx="32.7" cy="32.7" r="23.5" stroke="url(#a)"
+              transform="rotate(119.5 32.7 32.7)" /><path fill="url(#b)"
+              d="M36.6 27.2a3.6 3.6 0 1 1-7.2 0 3.6 3.6 0 0 1 7.2 0Z" /><path fill="url(#c)"
+              d="M42.6 29.6a2.4 2.4 0 1 1-4.8 0 2.4 2.4 0 0 1 4.8 0Z" /><path fill="url(#d)"
+              d="M37.8 38a4.8 4.8 0 0 0-9.6 0v3.6h9.6V38Z" /><path fill="url(#e)"
+              d="M28.2 29.6a2.4 2.4 0 1 1-4.8 0 2.4 2.4 0 0 1 4.8 0Z" /><path fill="url(#f)"
+              d="M40.2 41.6V38c0-1.2-.3-2.4-.9-3.5a3.6 3.6 0 0 1 4.5 3.5v3.6h-3.6Z" /><path fill="url(#g)"
+              d="M26.7 34.5c-.6 1-.9 2.3-.9 3.5v3.6h-3.6V38a3.6 3.6 0 0 1 4.5-3.5Z" /><circle cx="7" cy="42" r="1"
+              fill="#F0868A" /><circle cx="20" cy="47" r="1" fill="#F0868A" /><circle cx="24" cy="7" r="1"
+              fill="#F0868A" /><circle cx="16.5" cy="16.5" r=".5" fill="#F0868A" /><circle cx="18.5" cy="10.5" r=".5"
+              fill="#F0868A" /><circle cx="12.5" cy="48.5" r=".5" fill="#F0868A" /><defs><lineargradient id="a" x1="32.7"
+                x2="32.7" y1="8.7" y2="56.7" gradientUnits="userSpaceOnUse"><stop stop-color="#FF7D7D" /><stop offset="1"
+                  stop-color="#2C2E59" /></lineargradient><lineargradient id="b" x1="33" x2="33" y1="23.6" y2="30.8"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#EF777B" /><stop offset="1"
+                  stop-color="#F08F92" /></lineargradient><lineargradient id="c" x1="40.2" x2="40.2" y1="27.2" y2="32"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#EF777B" /><stop offset="1"
+                  stop-color="#F08F92" /></lineargradient><lineargradient id="d" x1="33" x2="33" y1="33.2" y2="41.6"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#EF777B" /><stop offset="1"
+                  stop-color="#F08F92" /></lineargradient><lineargradient id="e" x1="25.8" x2="25.8" y1="27.2" y2="32"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#EF777B" /><stop offset="1"
+                  stop-color="#F08F92" /></lineargradient><lineargradient id="f" x1="41.6" x2="41.6" y1="34.4" y2="41.6"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#EF777B" /><stop offset="1"
+                  stop-color="#F08F92" /></lineargradient><lineargradient id="g" x1="24.4" x2="24.4" y1="34.4" y2="41.6"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#EF777B" /><stop offset="1"
+                  stop-color="#F08F92" /></lineargradient></defs>
+          </svg>
+        </div>
+        <h3 class='benefits-item__title color-emphasized fsz-text-xlg fw-semibold'>Get New Friends</h3>
+        <p class='benefits-item__text'>You will meet new friends in some of classes that you take. Say hello to them and make
+          friends, it will be so much warm friendship!</p>
+      </li>
+
+      <li class='benefits__item benefits-item'>
+        <div class='benefits-item__figure'>
+          <svg width="48" height="48" fill="none" viewBox="0 0 66 66"><circle cx="32.7" cy="32.7" r="23.5" stroke="url(#ba)"
+              transform="rotate(119.5 32.7 32.7)" /><g clip-path="url(#bb)"><path fill="url(#bc)"
+                d="m35.1 30.2.5.1 2.4-3c.2-.2.5-.3.7-.1.2.1.2.4 0 .6l-2.4 3a1.4 1.4 0 0 1-.6 2.1h9.7c.3 0 .6-.2.6-.6v-8.1c0-.4-.3-.7-.6-.7H33c-.3 0-.6.3-.6.7v5.3l.6.7h2Z" /><path
+                fill="url(#bd)" d="M27.2 26.7a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2Z" /><path fill="url(#be)"
+                d="M29.8 43.9c0 .3-.2.6-.6.6h-1a.6.6 0 0 1-.7-.6v-5.4a.3.3 0 1 0-.7 0v5.3c0 .4-.3.7-.7.7h-1a.6.6 0 0 1-.7-.6v-13a.3.3 0 1 0-.6 0v5c0 .3-.3.6-.6.6h-.6a.6.6 0 0 1-.6-.6V29c0-.9.7-1.5 1.5-1.5h5.8a2 2 0 0 1 1.6.8l1.6 2 .3.4h2.3c.4 0 .7.2.7.6v.5c0 .4-.3.6-.7.6h-2.7a.9.9 0 0 1-.7-.3l-1.2-1.5-.2-.1h-.1c-.2 0-.3.1-.3.3v13Z" /></g><circle
+              cx="14" cy="39" r="1" fill="#6ABC9C" /><circle cx="49" cy="12" r="1" fill="#6ABC9C" /><circle cx="6.5" cy="40.5"
+              r=".5" fill="#6ABC9C" /><circle cx="11.5" cy="45.5" r=".5" fill="#6ABC9C" /><circle cx="50.5" cy="23.5" r=".5"
+              fill="#6ABC9C" /><defs><lineargradient id="ba" x1="32.7" x2="32.7" y1="8.7" y2="56.7"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#4DB88D" /><stop offset="1"
+                  stop-color="#2C2E59" /></lineargradient><lineargradient id="bc" x1="39.2" x2="39.2" y1="23.5" y2="32.9"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#4DB68D" /><stop offset="1"
+                  stop-color="#8CC3AE" /></lineargradient><lineargradient id="bd" x1="27.2" x2="27.2" y1="21.5" y2="26.7"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#4DB68D" /><stop offset="1"
+                  stop-color="#8CC3AE" /></lineargradient><lineargradient id="be" x1="28.9" x2="28.9" y1="27.6" y2="44.5"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#4DB68D" /><stop offset="1"
+                  stop-color="#8CC3AE" /></lineargradient><clippath id="bb"><path fill="#fff"
+                  d="M22 21h24v24H22z" /></clippath></defs>
+          </svg>
+        </div>
+        <h3 class='benefits-item__title color-emphasized fsz-text-xlg fw-semibold'>Expert and Fun Mentor</h3>
+        <p class='benefits-item__text'>Learn with earnest and don’t forget to get relax too. Learn and enjoy the materials or
+          classes with our expert mentors.</p>
+      </li>
+
+      <li class='benefits__item benefits-item'>
+        <div class='benefits-item__figure'>
+          <svg width="48" height="48" fill="none" viewBox="0 0 66 66"><circle cx="32.7" cy="32.7" r="23.5" stroke="url(#ca)"
+              transform="rotate(119.5 32.7 32.7)" /><path fill="url(#cb)"
+              d="M27 38h15V24a2 2 0 0 0-2-2H27c-1.2 0-3 .8-3 3v14c0 2.2 1.8 3 3 3h15v-2H27c-.4 0-1-.2-1-1v-.3c.1-.5.6-.7 1-.7Zm2.6-10.4a2.2 2.2 0 0 1 3.2 0l.2.3.2-.3a2.2 2.2 0 0 1 3.8 1.6 2.1 2.1 0 0 1-.7 1.5L33 34l-3.4-3.3a2.1 2.1 0 0 1 0-3Z" /><circle
+              cx="13" cy="13" r="1" fill="#BBAC64" /><circle cx="48" cy="46" r="1" fill="#BBAC64" /><circle cx="17.5" cy="17.5"
+              r=".5" fill="#BBAC64" /><circle cx="9.5" cy="18.5" r=".5" fill="#BBAC64" /><circle cx="12.5" cy="24.5" r=".5"
+              fill="#BBAC64" /><circle cx="43.5" cy="50.5" r=".5" fill="#BBAC64" /><circle cx="50.5" cy="52.5" r=".5"
+              fill="#BBAC64" /><defs><lineargradient id="ca" x1="32.7" x2="32.7" y1="8.7" y2="56.7"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#B8A74D" /><stop offset="1"
+                  stop-color="#2C2E59" /></lineargradient><lineargradient id="cb" x1="33" x2="33" y1="22" y2="42"
+                gradientUnits="userSpaceOnUse"><stop stop-color="#B0A04E" /><stop offset="1"
+                  stop-color="#CCC18A" /></lineargradient></defs>
+          </svg>
+        </div>
+        <h3 class='benefits-item__title color-emphasized fsz-text-xlg fw-semibold'>Flexible Access</h3>
+        <p class='benefits-item__text'>You can access materials or classes easily by our website also mobile. Access it
+          everywhere and everytime, no limit for you to learn!</p>
+      </li>
+
+    </ul>
+  </div>
+</section>
+      </main>
+
+      <footer class='footer'>
+  <nav class='footer__inner container'>
+    <ul class='footer__list'>
+
+      <li class='footer__column footer__column--wide'>
+        <div class='footer__logo-figure logo-figure'>
+          <a class='footer__logo logo-figure__logo' href='/' title='Icorner - Go To Main Page'>
+            <img src='/icon/_logo/logo.svg' alt='Icorner - Go To Main Page' />
+          </a>
+        </div>
+        <p class='footer__social-text'>Any feedback or questions? <br> Contact us on our social media</p>
+        <ul class='footer__social-icons'>
+          <li class='footer__social-icon'>
+            <a href='#' title='Facebook'>
+              <svg width="16" height="30" fill="none" viewBox="0 0 16 30"><path
+                  d="M13 5h2.7V.2l-4-.2C7.8 0 5.1 2.5 5.1 7v4.2H.7v5.4h4.4V30h5.3V16.6h4.2l.7-5.3h-4.9V7.6C10.4 6 10.8 5 13 5Z" /></svg>
+            </a>
+          </li>
+          <li class='footer__social-icon'>
+            <a href='#' title='Twitter (X)'>
+              <svg width="30" height="24" fill="none" viewBox="0 0 30 24"><path
+                  d="M9.8 23.3A16.3 16.3 0 0 0 26.2 6c1.1-.8 2-1.8 2.9-3-1 .5-2.2.8-3.4 1A5.8 5.8 0 0 0 28.3.7c-1.1.7-2.4 1.2-3.7 1.4a5.8 5.8 0 0 0-9.8 5.3c-4.8-.3-9-2.5-12-6a5.8 5.8 0 0 0 1.9 7.7c-1 0-1.9-.3-2.6-.8v.1c0 2.8 2 5.1 4.6 5.7a5.8 5.8 0 0 1-2.6 0c.7 2.4 2.8 4 5.4 4a11.6 11.6 0 0 1-8.6 2.5c2.6 1.6 5.6 2.6 8.9 2.6" /></svg>
+            </a>
+          </li>
+          <li class='footer__social-icon'>
+            <a href='#' title='Instagram'>
+              <svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path
+                  d="M20.6 0H9.4A9.4 9.4 0 0 0 0 9.4v11.2C0 25.8 4.2 30 9.4 30h11.2c5.2 0 9.4-4.2 9.4-9.4V9.4C30 4.2 25.8 0 20.6 0Zm6.6 20.6c0 3.6-3 6.6-6.6 6.6H9.4c-3.6 0-6.6-3-6.6-6.6V9.4c0-3.6 3-6.6 6.6-6.6h11.2c3.6 0 6.6 3 6.6 6.6v11.2Z" /><path
+                  d="M15 7.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Zm0 12.2a4.7 4.7 0 1 1 0-9.4 4.7 4.7 0 0 1 0 9.4ZM23 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" /></svg>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class='footer__column'>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href='/'>Home</a></li>
+          <li><a href='/courses'>Courses</a></li>
+          <li><a href='/news'>News</a></li>
+        </ul>
+      </li>
+
+      <li class='footer__column'>
+        <h4>Further Information</h4>
+        <ul>
+          <li><a href='#'>Terms & Conditions</a></li>
+          <li><a href='#'>Privacy Policy</a></li>
+        </ul>
+      </li>
+
+    </ul>
+
+    <div class='footer__copyright'>
+      Copyright © 2023 Gary. All Rights Reserved.
+    </div>
+  </nav>
+</footer>
+    </div>
+
+  </body>
+</html>
